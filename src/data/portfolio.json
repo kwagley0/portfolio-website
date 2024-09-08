@@ -1,0 +1,22 @@
+{
+    "portfolio": [
+        {
+            "cover": "/portfolio/FPL.png", 
+            "title": "PremierZone", 
+            "description": "ReactJS, PostgreSQL, Spring Boot", 
+            "url": "https://premier-zone.vercel.app/"
+        },
+        {
+            "cover": "/portfolio/crypto.png", 
+            "title": "Crypto Dashboard", 
+            "description": "Reactjs, Firebase", 
+            "url": "https://crypto-tracker-h2rw.onrender.com/"
+        },
+        {
+            "cover": "/portfolio/Chat.png", 
+            "title": "Chatterbox", 
+            "description": "ReactJS, MongoDB, ExpressJS, NodeJS", 
+            "url": "https://github.com/kwagley0/chatterbox/"
+        }
+    ]
+}
