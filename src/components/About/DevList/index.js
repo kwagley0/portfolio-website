@@ -1,28 +1,36 @@
 import React, { useState } from "react";
-import ProgressBar from "../ProgressBar";
-import "./index.scss"
+import "./index.scss";
 
 const TechList = () => {
   const [devs] = useState([
-    { name: "Amazon Web Services (AWS)", progress: 100, className: "aws-progress", years: 2 },
-    { name: "Postman", progress: 100, className: "postman-progress", years: 2 },
-    { name: "Git", progress: 100, className: "github-progress", years: 2 },
-    { name: "Microsoft Azure DevOps", progress: 50, className: "azure-progress", years: 1 },
-    { name: "Docker", progress: 50, className: "docker-progress", years: 1 },
-    { name: "Power BI", progress: 100, className: "pbi-progress", years: 1 },
+    {
+      name: "Docker",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+    },
+    {
+      name: "Git",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    },
+    {
+      name: "Postman",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+    },
   ]);
 
   return (
     <div>
       <h2>Development Tools</h2>
-      <ul>
+      <div className="dev-list-container">
         {devs.map((dev, index) => (
-          <li key={index}>
-            <span>{dev.name}: {`${dev.years} years`}</span>
-            <ProgressBar progress={dev.progress} className={dev.className} />
-          </li>
+          <div key={index} className="dev-card">
+            <img src={dev.image} alt={dev.name} className="dev-icon" />
+            <p className="dev-name">{dev.name}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

@@ -1,29 +1,65 @@
 import React, { useState } from "react";
-import ProgressBar from "../ProgressBar";
-import "./index.scss"
+import "./index.scss";
 
 const LanguageList = () => {
   const [languages] = useState([
-    { name: "Java", progress: 100, className: "java-progress", years: 4 },
-    { name: "Python", progress: 75, className: "python-progress", years: 3 },
-    { name: "HTML/CSS/JS", progress: 75, className: "web-progress", years: 3 },
-    { name: "SQL", progress: 37.5, className: "sql-progress", years: 1.5 },
-    { name: "C", progress: 25, className: "c-progress", years: 1 },
-    { name: "GoLang", progress: 25, className: "golang-progress", years: 1 },
-    { name: "VHDL", progress: 25, className: "vhdl-progress", years: 1 },
+    {
+      name: "Python",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    },
+    {
+      name: "Java",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    },
+    {
+      name: "C++",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+    },
+    {
+      name: "JavaScript",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    },
+    {
+      name: "TypeScript",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+    },
+    {
+      name: "SQL",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-plain.svg",
+    },
+    {
+      name: "HTML",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+    },
+    {
+      name: "CSS",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+    },
   ]);
 
   return (
     <div>
       <h2>Languages</h2>
-      <ul>
+      <div className="language-list-container">
         {languages.map((language, index) => (
-          <li key={index}>
-            <span>{language.name}: {`${language.years} years`}</span>
-            <ProgressBar progress={language.progress} className={language.className} />
-          </li>
+          <div key={index} className="language-card">
+            <img
+              src={language.image}
+              alt={language.name}
+              className="language-icon"
+            />
+            <p className="language-name">{language.name}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

@@ -37,7 +37,7 @@ const Contact = () => {
                     window.location.reload(false)
                 }, 
                 () => { 
-                    alert("Failed to send the message, please try again")
+                    alert("Failed to send the message, please email me directly instead!")
                 }
             )
       }
@@ -80,7 +80,6 @@ const Contact = () => {
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href={process.env.REACT_APP_EMAIL}
                     >
                       <FontAwesomeIcon
                         icon={faEnvelope}
