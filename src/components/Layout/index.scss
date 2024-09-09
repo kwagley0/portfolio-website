@@ -20,16 +20,18 @@
     animation-delay: 1s; 
 }
 
-.container.about-page {
+@media (min-width: 1000px){
+  
+  .container.about-page {
     position: relative; 
     margin-top: -50px;
-}
+  }
 
-.container.work-page {
+  .container.work-page {
     position: relative; 
     margin-top: -40px;
+  }
 }
-
 
 .container.work-page,
 .container.contact-page,
