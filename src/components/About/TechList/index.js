@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import ProgressBar from "../ProgressBar";
-import "./index.scss"
+import "./index.scss";
+import svg from "../../../assets/icons/express-svgrepo-com.svg";
 
 const TechList = () => {
   const [techs] = useState([
     {
       name: "AWS",
       image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
     },
     {
       name: "React",
@@ -40,8 +41,7 @@ const TechList = () => {
     },
     {
       name: "ExpressJS",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+      image: svg,
     },
     {
       name: "NodeJS",
@@ -79,6 +79,5 @@ const TechList = () => {
     </div>
   );
 };
-
 
 export default TechList;
